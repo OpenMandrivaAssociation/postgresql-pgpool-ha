@@ -1,7 +1,5 @@
 %define short_name	pgpool-ha
 
-%define	pgsqld	%{_localstatedir}/lib/pgsql/data
-
 Summary:	Pgpool-HA uses heartbeat to keep pgpool from being a single point of failure
 Name:		postgresql-%{short_name}
 Version:	1.2
