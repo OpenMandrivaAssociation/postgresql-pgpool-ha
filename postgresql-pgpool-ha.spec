@@ -7,7 +7,7 @@ Release:	%mkrel 1
 License:	BSD
 Group:		Databases
 URL:		http://pgpool.projects.PostgreSQL.org
-Source0:	http://pgfoundry.org/frs/download.php/2506/%{short_name}-%{version}.tar.gz
+Source0:	http://pgfoundry.org/frs/download.php/1124/%{short_name}-%{version}.tar.gz
 Patch0:		pgpool-ha-1.2-destdir.patch
 BuildRequires:	heartbeat
 Requires:	postgresql-pgpool-II heartbeat
