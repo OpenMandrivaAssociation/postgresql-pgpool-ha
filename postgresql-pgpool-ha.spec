@@ -9,6 +9,7 @@ Group:		Databases
 URL:		http://pgpool.projects.PostgreSQL.org
 Source0:	http://pgfoundry.org/frs/download.php/1124/%{short_name}-%{version}.tar.gz
 Patch0:		pgpool-ha-1.2-destdir.patch
+Patch1:		pgpool-ha-1.2-pgpool.pid-path.patch
 BuildRequires:	heartbeat
 Requires:	postgresql-pgpool-II heartbeat
 Provides:	%{short_name} = %{version}-%{release}
@@ -23,6 +24,7 @@ this.
 %prep
 %setup -q -n %{short_name}-%{version}
 %patch0 -p1 -b .destdir~
+%patch1 -p1 -b .pidpath~
 
 %build
 %configure2_5x
