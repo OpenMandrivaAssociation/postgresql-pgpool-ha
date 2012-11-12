@@ -1,0 +1,21 @@
+diff -p -up pgpool-ha-1.2/src/pgpool.in.pidpath~ pgpool-ha-1.2/src/pgpool.in
+--- pgpool-ha-1.2/src/pgpool.in.pidpath~	2010-09-05 22:40:27.605365012 +0200
++++ pgpool-ha-1.2/src/pgpool.in	2010-09-05 22:40:31.585364961 +0200
+@@ -62,7 +62,7 @@ if [ "x$OCF_RESKEY_logfile" != 'x' ]; th
+ 	LOGFILE=$OCF_RESKEY_logfile
+ fi
+ if [ "x$OCF_RESKEY_pidfile" = 'x' ]; then
+-	PGPOOL_PID=/tmp/pgpool.pid
++	PGPOOL_PID=/var/run/pgpool/pgpool.pid
+ else
+ 	PGPOOL_PID=$OCF_RESKEY_pidfile
+ fi
+@@ -205,7 +205,7 @@ cat <<EOF
+          Path to pgpool.pid
+       </longdesc>
+       <shortdesc lang="en">pidfile</shortdesc>
+-      <content type="string" default="/tmp/pgpool.pid" />
++      <content type="string" default="/var/run/pgpool/pgpool.pid" />
+     </parameter>
+     <parameter name="options" unique="0" required="0">
+       <longdesc lang="en">

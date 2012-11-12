@@ -1,0 +1,14 @@
+diff -p -up pgpool-ha-1.2/src/Makefile.in.destdir~ pgpool-ha-1.2/src/Makefile.in
+--- pgpool-ha-1.2/src/Makefile.in.destdir~	2010-09-04 23:46:38.498625694 +0200
++++ pgpool-ha-1.2/src/Makefile.in	2010-09-04 23:47:12.722364445 +0200
+@@ -19,8 +19,8 @@ pgpool: pgpool.in
+ 	sed -e 's#@_PGPOOL_@#${PGPOOL}#g' > pgpool
+ 
+ install: all
+-	$(INSTALL_PROGRAM) pgpool /usr/lib/ocf/resource.d/heartbeat/
+-	$(INSTALL_PROGRAM) pgpool.monitor ${PGPOOL}.monitor
++	$(INSTALL_PROGRAM) pgpool -D $(DESTDIR)/usr/lib/ocf/resource.d/heartbeat/pgpool
++	$(INSTALL_PROGRAM) pgpool.monitor -D $(DESTDIR)${PGPOOL}.monitor
+ 
+ 
+ clean:
