@@ -10,6 +10,11 @@ URL:		https://pgpool.projects.PostgreSQL.org
 Source0:	http://pgfoundry.org/frs/download.php/1124/%{short_name}-%{version}.tar.gz
 Patch0:		pgpool-ha-1.2-destdir.patch
 Patch1:		pgpool-ha-1.2-pgpool.pid-path.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	heartbeat postgresql-pgpool-II
 Requires:	postgresql-pgpool-II heartbeat
 Provides:	%{short_name} = %{version}-%{release}
